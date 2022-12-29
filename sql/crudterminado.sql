@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2022 a las 03:43:37
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Tiempo de generación: 29-12-2022 a las 12:47:06
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,7 +37,7 @@ CREATE TABLE `socios` (
   `email` varchar(30) NOT NULL,
   `telefono` varchar(25) NOT NULL,
   `activo` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `socios`
@@ -56,16 +56,6 @@ INSERT INTO `socios` (`idSocio`, `nombre`, `apellido`, `direccion`, `localidad`,
 --
 ALTER TABLE `socios`
   ADD PRIMARY KEY (`idSocio`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `socios`
---
-ALTER TABLE `socios`
-  MODIFY `idSocio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
