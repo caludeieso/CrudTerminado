@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>agregarsocio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS only -->
@@ -20,16 +20,19 @@
     <body>
         
         <div class="container" >
-            <h1 class="text-center" >Añadir Alumno</h1>
+             <h2 class="display-4 mt-4">
+                Agregar
+                <small class="text-muted">Nuevo socio</small>
+             </h2>
                 <div class="row" >
                     <form class="p-4" method="POST" action="SociosController?accion=insert">
-                        <div class="mb-2">
-                            <label for="nombre" class="form-label" >Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">                          
+                       <div class="input-group mb-5">
+                            <span class="input-group-text" id="inputGroup-sizing-default " >Nombre</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="nombre" name="nombre" required>
                         </div> 
-                        <div class="mb-2">
-                            <label for="apellido" class="form-label" >Apellido</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido">                          
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default " >Apellido</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="apellido" name="apellido" required>
                         </div> 
                          <div class="mb-2">
                             <label for="direccion" class="form-label" >Direccion</label>
@@ -39,20 +42,20 @@
                             <label for="localidad" class="form-label" >Localidad</label>
                             <input type="text" class="form-control" id="localidad" name="localidad">                          
                         </div> 
-                          <div class="mb-2">
+                          <div class="mb-5">
                             <label for="fnac" class="form-label" >Fecha Nac</label>
                             <input type="date" class="form-control" id="fnac" name="fnac">                          
                         </div> 
-                        <div class="mb-2">
-                            <label for="mail" class="form-label" >E-Mail</label>
-                            <input type="text" class="form-control" id="mail" name="mail">                          
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default " >E-mail</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="email" name="email" required>
                         </div>  
-                        <div class="mb-2">
+                        <div class="mb-4">
                             <label for="telefono" class="form-label" >Telefono</label>
                             <input type="text" class="form-control" id="telefono" name="telefono">                          
                         </div>                
                                                
-                        <button type="submit" class="btn btn-primary" >Añadir </button>
+                        <button type="submit" class="btn btn-outline-primary" >Añadir </button>
                         
                     </form>                
                 </div>

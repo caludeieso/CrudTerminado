@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>listadosocios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS only -->
@@ -25,14 +25,21 @@
 
     </head>
     <body>
-        <h1>Listado de Socios del Gym</h1>
-        
-        
         <div class="container">
-            <div class="row">   
-                <a class="btn btn-primary col-4 m-4" href="SociosController?accion=nuevo">Agregar Socio</a>
+        
+        <h2 class="display-4 mt-4">
+            Listado de Socios
+         <small class="text-muted">del Gym</small>
+        </h2>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+             <a class="btn btn-outline-primary" href="SociosController?accion=nuevo">Agregar Socio</a>
+             
+        </div>
+            <div class="row mt-4">   
                 
-                <table class="table table-primary">
+                <table class="table table-primary table-striped">
+                    
                     <thead>
                             <th>id</th>
                             <th>Nombre</th>
@@ -45,6 +52,7 @@
                              <th>Modificar</th>
                              <th>Eliminar</th>
                     </thead>
+                  
                     
                     <%
                     List<Socios> resultado=null;
@@ -67,8 +75,8 @@
                          <td><%=resultado.get(i).getFnac()%></td>
                          <td><%=resultado.get(i).getTelefono()%></td>
                          <td><%=resultado.get(i).getMail()%></td>
-                         <td class="text-center"><a href=<%=ruta%>> <i class="fa-solid fa-arrow-right-arrow-left"></i> </a></td>
-			 <td class="text-center"><a href=<%=rutaE%>><i class="fa-solid fa-arrow-down"></i> </a></td>
+                         <td class="text-center"><a href=<%=ruta%>> <i class="fa-solid fa-marker"></i></a></td>
+			 <td class="text-center"><a href=<%=rutaE%>><i class="fa-solid fa-trash"></i> </a></td>
                     </tr>
                     <%
                         }

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-12-2022 a las 12:47:06
+-- Tiempo de generación: 30-12-2022 a las 02:53:48
 -- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.1.12
+-- Versión de PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `crudterminado`
+-- Base de datos: `bdsocios`
 --
 
 -- --------------------------------------------------------
@@ -44,6 +44,10 @@ CREATE TABLE `socios` (
 --
 
 INSERT INTO `socios` (`idSocio`, `nombre`, `apellido`, `direccion`, `localidad`, `fnac`, `email`, `telefono`, `activo`) VALUES
+(2, 'Lara', 'Juez', 'Italia 440', 'Quilmes', '1981-12-11', 'nm12@gmail.com', '160045836', 1),
+(3, 'Alejandro', 'Velez', 'Santa Fe 943', 'Berazategui', '1989-10-14', 'alevelez@gmail.com', '1555548796', 1),
+(4, 'franciasco', 'fabiez', 'Colorado 1543', 'Caba', '1981-09-14', 'naaanb2@gmail.com', '22122358', 1),
+(5, 'Fernada', 'Torres', 'Rodo 234', 'Ranelagh', '1935-12-05', 'fertorres@gmail.com', '1225544455', 1),
 (7, 'Nicolas', 'Fernandez', 'Cordoba', 'Quilmes', '1981-12-11', 'nmfernandez12@gmail.com', '1600', 1),
 (9, 'Nicolas', 'Alvarez', 'Cordoba 1543', 'Quilmes', '1981-09-14', 'nmfernandez1aaa2@gmail.com', '22', 1);
 
@@ -56,6 +60,16 @@ INSERT INTO `socios` (`idSocio`, `nombre`, `apellido`, `direccion`, `localidad`,
 --
 ALTER TABLE `socios`
   ADD PRIMARY KEY (`idSocio`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `socios`
+--
+ALTER TABLE `socios`
+  MODIFY `idSocio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
